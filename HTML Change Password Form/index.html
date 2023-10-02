@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <!-- http://cnmtsrv2.uwsp.edu/home/dfyks497 -->
 <html lang="en">
+  
   <head>
-    <script lang="js" src="password.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <title>CNMT 310 Change Password Form</title>
+      <title>CNMT 310: Change Password Form</title>
+      <link rel="stylesheet" href="style.css">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
+
   <body>
-    <h1>Change Password</h1>
-    <form action="#" method="POST">
-      <label for="newPassword">Enter new password:</label>
-      <input type="password" id="newPassword" name="newPassword" minlength="8"><br><br>
-      <label for="confirmPassword">Comfirm new Password:</label>
-      <input type="password" id="confirmPassword" name="confirmPassword" minlength="8"><br><br>
-      <button type="submit">Change Password</button>
-    </form>
-  </body>
+      <h1>Change Password</h1>
+      <h3>
+        Please enter a new password that meets the following requirements:
+      </h3>
+      <ul>
+        <li>
+          Minimum length of 4 characters
+        </li>
+        <li>
+          Maximum length of 8 characters
+        </li>
+        <li>
+          Contains at least 1 numerical character
+        </li>
+        <li>
+          Contains at least 1 uppercase character
+        </li>
+      </ul>
+      <br>
+      <form action="action.php" method="POST" id="password-form">
+        <label for="newPassword">
+          Enter new password:
+        </label>
+        <input 
+          type="password" 
+          id="new-password" 
+          name="newPassword"><br><br>
+        <label for="confirmPassword">
+          Comfirm new Password:
+        </label>
+        <input 
+          type="password" 
+          id="confirm-password" 
+          name="confirmPassword"><br><br>
+        <button type="submit">
+          Submit
+        </button>
+      </form>
+      <br>
+      <div id="warning-message"></div>
+      <!-- <script lang="js" src="password.js"></script> -->
+    </body>
+    
 </html>
