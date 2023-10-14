@@ -17,7 +17,7 @@ function echo_form($errorMessage, $formContent) {
 }
 
 if (empty($_POST['username']) || empty($_POST['password'])) {
-    echo_form("Your username and/or password was not entered! Enter both and try again.", $formContent);
+    echo_form("Your username or password was not entered! Enter both and try again.", $formContent);
 }
 
 else {
@@ -41,6 +41,6 @@ else {
         </html>';
     }
     else {
-        echo_form("Your username and/or password was invalid! Check your spelling and try again.", $formContent);
+        echo_form("Your username or password was invalid! Check your spelling and try again.", $formContent);
     }
 }
